@@ -1,0 +1,26 @@
+auto lo
+
+iface lo inet loopback
+iface eth0 inet dhcp
+iface default inet dhcp
+
+allow-hotplug wlan0
+auto wlan0
+iface wlan0 inet dhcp
+#wireless-essid "OG House"
+#pre-up wpa_supplicant -B w -D wext -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf
+#post-down killall -q wpa_supplicant
+
+wpa-driver wext
+wpa-ssid "SSID"
+#; wpa-ap-scan is 1 for visible and 2 for hidden hubs
+wpa-ap-scan 1
+#; wpa-proto is WPA for WPA1 (aka WPA) or RSN for WPA2
+wpa-proto RSN
+#; wpa-pairwise and wpa-group is TKIP for WPA1 or CCMP for WPA2
+wpa-pairwise CCMP
+wpa-group CCMP
+wpa-key-mgmt WPA-PSK
+#; use "wpa_passphrase UR_ESSID UR_KEY" to generate UR_HEX_KEY
+#; enter the result below
+wpa-psk UR_HEX_KEY
