@@ -24,3 +24,5 @@ wpa-key-mgmt WPA-PSK
 #; use "wpa_passphrase UR_ESSID UR_KEY" to generate UR_HEX_KEY
 #; enter the result below
 wpa-psk UR_HEX_KEY
+
+##Generate key with `wpa_passphrase "SSID" PASSPHRASE`
