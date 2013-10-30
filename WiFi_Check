@@ -10,6 +10,9 @@
 # Copyright: Copyright (c) 2012 Kevin Reed <kreed@tnet.com>
 #            https://github.com/dweeber/WiFi_Check
 #
+# Modified by: Josh Hill
+#
+#
 # Purpose:
 #
 # Script checks to see if WiFi has a network IP and if not
@@ -36,7 +39,7 @@
 lockfile='/var/run/WiFi_Check.pid'
 # Which Interface do you want to check/fix
 wlan='wlan0'
-pingip='192.168.1.1'
+pingip='192.168.32.1'
 ##################################################################
 echo
 echo "Starting WiFi check for $wlan"
